@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Pressão Arterial</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/marcaçao.css">
+	<link rel="stylesheet" href="icons/fonta/css/all.css">
+	<link rel="icon" href="img/heart3.png">
+
+</head>
+<body>
+
+	<header>
+		<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+			<a href="index.html" class="navbar-brand"><img src="img/heart3.png" style="width: 50px">HEALTH TRACK</a>
+			<button class="navbar-toggler" data-toggle="collapse"
+			 data-target="#navegacao">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><a href="dados.html" class="nav-link"><img src="img/edit.png" style="width: 30px"> Editar dados</a></li>
+				<li class="nav-item"><a href="login.html" class="nav-link"><img src="img/exit.png" style="width: 30px"> Sair</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="row">
+
+		<!-- inicio sidebar -->
+		<div class="col-md-2">
+			<nav id="navegacao">
+			<ul class="bg-dark side">
+				<div class="text-center"><a href="index.html">
+					<i class="far fa-user fa-7x icone"></i></a>
+					<h3 class="text-secondary mb-3">Vinício Alves</h3>
+				</div>
+
+				<li class="pl-5 py-3" style="border-top: dotted 1px #515050;">
+					<a href="atividade.html" class="nav-link">
+					<i class="fas fa-dumbbell fa-2x">
+					</i>
+					<span class="pl-2">Atividade Física</span>
+					</a>
+				</li>
+				<li class="pl-5 py-3">
+					<a href="alimentacao.html" class="nav-link">
+					<i class="fas fa-utensils fa-2x">
+					</i>
+					<span class="pl-2">Alimentação</span>
+					</a>
+				</li>
+				<li class="pl-5 py-3">
+					<a href="pressao.html" class="nav-link">
+					<i class="fas fa-hand-holding fa-2x"></i>
+					<span class="pl-2">Pressão arterial</span>
+					</a>
+				</li>
+				<li class="pl-5 py-3">
+					<a href="login.html" class="nav-link">
+					<i class="fas fa-sign-out-alt fa-2x"></i>
+					<span class="pl-2">Sair</span>
+					</a>
+				</li>
+			</ul>
+			</nav>
+		</div>
+		<!-- final sidebar -->
+
+		<!-- inicio conteúdo central -->
+		<form name="formPress" action="index.html" method="post" class="col-md-8">
+			<h1 class="text-md-center display-2">Pressão Arterial</h1>
+			<hr>
+			<div class="d-flex justify-content-center" >
+				<div class="form-group formulario bg-primary">
+					<label for="pressao">Pressão Sistólica</label>
+					<input name="sist" type="number" class="form-control form-control-lg">
+					<span id="erro1" style="color: red;"></span>	
+				</div>
+				<div class="form-group formulario bg-primary">
+					<label for="pressao">Pressão Diastólica</label>
+					<input name="diast" type="number" class="form-control form-control-lg">	
+					<span id="erro2" style="color: red;"></span>
+				</div>
+			</div>
+			<div class="d-flex justify-content-center">
+				<div class="bg-primary formulario">
+					<div class="form-group">
+						<label for="data">Dia da medição</label>
+						<input name="data" type="date" class="form-control form-control-lg" id="date">
+						<span id="erro3" style="color: red;"></span>
+					</div>
+				</div>	
+			</div>
+
+
+			<div class="mt-5 d-flex justify-content-center">
+			<button onclick="return cadastrarPressao()" class="btn btn-success btn-lg mb-3" type="submit" style="width: 20%">Salvar</button>
+			</div>
+		</form>
+		<!-- final conteúdo central -->
+
+		<!-- inicio sidebar direito -->
+		
+		<div class="col-md-2 bg-secondary text-white py-2">
+			<h2 class="text-info">Exercícios recentes</h2>
+			<table border="1" width="100%">
+				<tr>
+					<th colspan="2">Academia</th>
+				</tr>
+				<tr>
+					<td>Data e Horário</td>
+					<td>13/07/2019 - 19:30</td>
+				</tr>
+				<tr>
+					<td>Calorias gastas</td>
+					<td>285</td>
+				</tr>
+				<tr>
+					<th colspan="2">Corrida</th>
+				</tr>
+				<tr>
+					<td>Data e Horário</td>
+					<td>12/07/2019 - 14:30</td>
+				</tr>
+				<tr>
+					<td>Calorias gastas</td>
+					<td>330</td>
+				</tr>
+			</table>
+			<br>
+			<h2 class="pt-2 text-info">Alimentação recente</h2>
+			<table border=".1" width="100%">
+				<tr>
+					<th colspan="2">Filé de frango</th>			
+				</tr>
+				<tr>
+					<td>Data e Horário</td>
+					<td>13/06/2019 - 12:30</td>
+				</tr>
+				<tr>
+					<td>Calorias ingeridas</td>
+					<td>190</td>
+				</tr>
+				<tr>
+					<th colspan="2">Batata doce</th>
+				</tr>
+				<tr>
+					<td>Data e Horário</td>
+					<td>11/07/2019 - 15:10</td>
+				</tr>
+				<tr>
+					<td>Calorias ingeridas</td>
+					<td>220</td>
+				</tr>
+			</table>
+			<br>
+			<h2 class="pt-2 text-info">Pressão arterial recente</h2>
+			<table border=".1" width="100%">
+				<tr>
+					<th colspan="2">Pressão sistólica</th>			
+				</tr>
+				<tr>
+					<td colspan="2">120</td>
+				</tr>
+				<tr>
+					<th colspan="2">Pressão diastólica</th>
+				</tr>
+				<tr>
+					<td colspan="2">80</td>
+				</tr>
+				<tr>
+					<td>Data e Horário</td>
+					<td>10/06/2019 - 11:50</td>
+				</tr>
+			</table>
+		</div>
+		<!-- final sidebar direito -->
+
+	</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/pressao.js"></script>
+</body>
+</html>

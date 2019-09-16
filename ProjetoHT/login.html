@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Login - Health Track</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+  <link rel="icon" href="img/heart3.png">
+	
+</head>
+
+<body class="text-center">
+  <form name="formlogin" class="form-signin" action="index.html" method="post">
+    	<img src="img/heart3.png" alt="Health Track Logo" title="Health Track">
+    	<h1 class="h3 mb-3 font-weight-normal">Faça seu login</h1>
+
+  	  <label for="email" class="sr-only">Email</label>
+  	  <input type="email" name="email" class="form-control" placeholder="Email"  autofocus>
+      <span id="erro1" style="color: red;"></span>
+
+  	  <label for="inputPassword" class="sr-only">Senha</label>
+  	  <input type="password" name="senha" class="form-control" placeholder="Senha">
+      <span id="erro2" style="color: red;"></span>
+      
+      <div class="checkbox mb-3">
+  	    <label>
+  	      <input type="checkbox" value="lembrar"> Lembrar
+     	  </label>
+      </div>
+      <button onclick="return logar()" type="submit" class="btn btn-lg btn-primary btn-block">Logar</button>
+      <!--
+      <a class="btn btn-lg btn-primary btn-block" href="index.html" role="button">Logar
+      </a> -->
+      <br>
+
+      <div>
+    	  <span>Ainda não tem cadastro?</span>
+    	  <a class="btn btn-lg btn-warning btn-block" href="cadastro.html" role="button">Cadastre-se</a>
+      </div>
+
+    <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+  	</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
